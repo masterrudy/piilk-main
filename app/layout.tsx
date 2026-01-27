@@ -1,19 +1,41 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import './globals.css';
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'PIILK - Nothing after. Period.',
-  description: 'Clean protein, no compromise.',
+  metadataBase: new URL("https://piilk.com"), // 본사이트 도메인으로 고정
+
+  title: "PIILK - Nothing after. Period.",
+  description: "Clean protein, no compromise.",
+
   icons: {
-    icon: '/Piilk_icon.png',
+    icon: "/Piilk_icon.png",
+    apple: "/Piilk_icon.png",
   },
+
   openGraph: {
-    title: 'PIILK - Nothing after. Period.',
-    description: 'Clean protein, no compromise.',
-    images: ['/og-image.png'],
+    title: "PIILK - Nothing after. Period.",
+    description: "Clean protein, no compromise.",
+    url: "https://piilk.com",
+    siteName: "PIILK",
+    type: "website",
+    images: [
+      {
+        url: "https://piilk.com/og-image-v2.png",
+        width: 1200,
+        height: 630,
+        alt: "PIILK",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "PIILK - Nothing after. Period.",
+    description: "Clean protein, no compromise.",
+    images: ["https://piilk.com/og-image-v2.png"],
   },
 };
 
