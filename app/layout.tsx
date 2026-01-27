@@ -9,8 +9,8 @@ export const metadata: Metadata = {
   title: "PIILK - Nothing after. Period.",
   description: "Clean protein, no compromise.",
   icons: {
-    icon: "/Piilk_icon.png",
-    apple: "/Piilk_icon.png",
+    icon: "/favicon-v2.png",
+    apple: "/favicon-v2.png",
   },
   openGraph: {
     title: "PIILK - Nothing after. Period.",
