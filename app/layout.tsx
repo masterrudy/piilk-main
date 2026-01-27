@@ -5,16 +5,13 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://piilk.com"), // 본사이트 도메인으로 고정
-
+  metadataBase: new URL("https://piilk.com"),
   title: "PIILK - Nothing after. Period.",
   description: "Clean protein, no compromise.",
-
   icons: {
     icon: "/Piilk_icon.png",
     apple: "/Piilk_icon.png",
   },
-
   openGraph: {
     title: "PIILK - Nothing after. Period.",
     description: "Clean protein, no compromise.",
@@ -30,7 +27,6 @@ export const metadata: Metadata = {
       },
     ],
   },
-
   twitter: {
     card: "summary_large_image",
     title: "PIILK - Nothing after. Period.",
@@ -46,6 +42,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-PFR2X0QFJ2"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-PFR2X0QFJ2');
+            `,
+          }}
+        />
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   );
