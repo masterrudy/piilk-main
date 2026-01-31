@@ -21,6 +21,16 @@ export default function HomePage() {
           <br />
           <span className="font-normal">Period.</span>
         </h1>
+
+        {/* Footer - House mark + 제품 카테고리 */}
+        <div className="mt-10">
+          <p className="text-[9px] tracking-[0.25em] text-zinc-500 uppercase font-medium">
+            PIILK™ by ARMORED FRESH
+          </p>
+          <p className="text-[9px] tracking-[0.15em] text-zinc-500 mt-1 font-medium">
+            RTD High Protein Shake.
+          </p>
+        </div>
       </div>
     </main>
   );
